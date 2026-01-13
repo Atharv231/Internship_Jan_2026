@@ -40,18 +40,18 @@ router.put("/:id", async (req, res) => {
   }
 });
 //CRUD
-// router.post("/", (req, res) => {
-//   console.log(req.body);
-//   res.json(req.body);
-// });
-// router.post("/:userid", (req, res) => {
-//   const a = req.params;
-//   console.log(a);
-//   //   res.json(req.body);
-// });
+router.post("/", (req, res) => {
+  console.log(req.body);
+  res.json(req.body);
+});
+router.post("/:userid", (req, res) => {
+  const a = req.params;
+  console.log(a);
+  //   res.json(req.body);
+});
 
-// router.get("/", (req, res) => {
-//   console.log(req.query);
-//   res.json(req.body);
-// });
+router.get("/", (req, res) => {
+  console.log(req.query);
+  res.json(req.body);
+});
 exports.router = router;
