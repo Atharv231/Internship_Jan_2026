@@ -24,21 +24,21 @@ router.post("/", async (req, res) => {
   }
 });
 
-// router.put("/:id", async (req, res) => {
-//   try {
-//     const { id } = req.params;
-//     const { title, description, isCompleted } = req.body;
-//     const todo = await Todo.findByPk(id);
-//     if (!todo) {
-//       return res.status(404).json({ message: "Todo not found" });
-//     }
-//     await todo.update({ title, description, isCompleted });
-//     res.status(200).json(todo);
-//   } catch (error) {
-//     console.error(error);
-//     res.status(500).json({ error: error.message });
-//   }
-// });
+router.put("/:id", async (req, res) => {
+  try {
+    const { id } = req.params;
+    const { title, description, isCompleted } = req.body;
+    const todo = await Todo.findByPk(id);
+    if (!todo) {
+      return res.status(404).json({ message: "Todo not found" });
+    }
+    await todo.update({ title, description, isCompleted });
+    res.status(200).json(todo);
+  } catch (error) {
+    console.error(error);
+    res.status(500).json({ error: error.message });
+  }
+});
 //CRUD
 router.post("/", (req, res) => {
   console.log(req.body);
