@@ -35,14 +35,14 @@ router.post("/login", async (req, res) => {
   }
 });
 
-// router.get("/Users", async (req, res) => {
-//   try {
-//     const login = await users.findAll(); // fetch all tasks from DB
-//     res.json(login);
-//   } catch (error) {
-//     console.error(error);
-//     res.status(500).json({ error: error.message });
-//   }
-// });
+router.get("/Users", async (req, res) => {
+  try {
+    const login = await users.findAll(); // fetch all tasks from DB
+    res.json(login);
+  } catch (error) {
+    console.error(error);
+    res.status(500).json({ error: error.message });
+  }
+});
 
 module.exports = router;
