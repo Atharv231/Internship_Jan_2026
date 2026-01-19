@@ -22,7 +22,7 @@ const Task = sequelize.define(
   {
     tableName: "tasks",
     timestamps: true, // createdAt & updatedAt
-  }
+  },
 );
 
 module.exports = Task;
