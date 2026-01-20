@@ -1,14 +1,14 @@
-// const express = require("express");
-// const router = express.Router();
+const express = require("express");
+const router = express.Router();
 
-// const { login, dashboard } = require("../controllers/authController");
+const { login, dashboard } = require("../controllers/authController");
 
-// const authMiddleware = require("../middleware/authMiddleware");
+const authMiddleware = require("../middleware/authMiddleware");
 
-// // public
-// router.post("/login", login);
+// public
+router.post("/login", login);
 
-// // protected
-// router.get("/dashboard", authMiddleware, dashboard);
+// protected
+router.get("/dashboard", authMiddleware, dashboard);
 
-// module.exports = router;
+module.exports = router;
