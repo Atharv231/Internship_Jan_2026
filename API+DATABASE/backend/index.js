@@ -49,10 +49,6 @@ const startServer = async () => {
     await sequelize.authenticate();
     console.log("✅ PostgreSQL connected successfully");
 
-    // Supabase DB
-    await sequelize2.authenticate();
-    console.log("✅ PostgreSQL DB2 connected");
-
     // 🔥 LOAD SUPABASE MODELS
     require("./database/Users");
 
